@@ -1,4 +1,5 @@
 # Composer files
+.idea
 composer.phar
 vendor/
 

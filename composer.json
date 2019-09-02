@@ -1,5 +1,5 @@
 {
-    "name": "dino/dompdf-module",
+    "name": "avs/dompdf-module",
     "type": "library",
     "description": "A Zend Framework 2 module for incorporating DOMPDF support.",
     "keywords": ["pdf","dompdf", "zf2"],
@@ -12,18 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=5.6",
-        "zendframework/zend-loader": "^2.4",
-        "zendframework/zend-servicemanager": "^2.4",
-        "zendframework/zend-modulemanager": "^2.4",
-        "zendframework/zend-mvc": "^2.4",
-        "zendframework/zend-view": "^2.4",
-        "zendframework/zend-serializer": "^2.4",
-        "zendframework/zend-log": "^2.4",
-        "zendframework/zend-i18n": "^2.4",
-        "zendframework/zend-http": "^2.4",
-        "zendframework/zend-console": "^2.4",
-        "dompdf/dompdf": "^0.8.0"
+        "php": ">=7.2",
+        "dompdf/dompdf": "~0.8.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8.27",
