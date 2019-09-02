@@ -19,10 +19,9 @@
 
 namespace DOMPDFModule\Mvc\Service;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 use DOMPDFModule\View\Strategy\PdfStrategy;
 use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
 class ViewPdfStrategyFactory implements FactoryInterface
 {
@@ -33,9 +32,11 @@ class ViewPdfStrategyFactory implements FactoryInterface
      * injects it into the constructor for the PDF strategy.
      *
      * @param ContainerInterface $container
+     * @param $requestedName
+     * @param array|null $options
      * @return PdfStrategy
      */
-    public function __invoke(ContainerInterface $container)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         return new PdfStrategy($container->get('ViewPdfRenderer'));
     }

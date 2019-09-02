@@ -21,7 +21,8 @@ namespace DOMPDFModule\Service;
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
-use Zend\ServiceManager\FactoryInterface;
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class DOMPDFFactory implements FactoryInterface
@@ -29,12 +30,11 @@ class DOMPDFFactory implements FactoryInterface
     /**
      * Creates an instance of Dompdf.
      *
-     * @param  ServiceLocatorInterface $serviceLocator
      * @return Dompdf
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $moduleConfig = $serviceLocator->get('config')['dompdf_module'];
+        $moduleConfig = $container->get('config')['dompdf_module'];
 
         $options = [
             'temp_dir'                   => $moduleConfig['temporary_directory'],
