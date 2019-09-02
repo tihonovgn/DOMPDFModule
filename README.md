@@ -8,7 +8,6 @@ Fork from https://github.com/raykolbe/DOMPDFModule
 The DOMPDF module integrates the DOMPDF library with Zend Framework 2 with minimal effort on the consumer's end.
 
 ## Requirements
-  - [Zend Framework 2](http://www.github.com/zendframework/zf2)
   - [Zend Framework 3](https://github.com/zendframework/zendframework)
 
 ## Installation
